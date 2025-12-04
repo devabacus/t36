@@ -1,0 +1,5 @@
+class: TagSyncEvent
+fields:
+  type: SyncEventType
+  tag: Tag?,  
+  id: UuidValue?,

@@ -1,0 +1,5 @@
+class: TaskTagMapSyncEvent
+fields:
+  type: SyncEventType
+  taskTagMap: TaskTagMap?,  
+  id: UuidValue?,

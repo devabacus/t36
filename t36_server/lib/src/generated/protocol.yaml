@@ -1,2 +1,48 @@
+admin:
+  - listUsers:
+  - updateUserRole:
+  - listRoles:
+  - listPermissions:
+  - createOrUpdateRole:
+  - deleteRole:
+  - getMyCustomer:
+  - createUser:
+  - getUserDetails:
+  - blockUser:
+  - getRoleDetails:
+  - updateUser:
+configuration:
+  - createConfiguration:
+  - getConfigurations:
+  - getConfigurationById:
+  - getConfigurationsSince:
+  - updateConfiguration:
+  - watchEvents:
+storage:
+  - requestUpload:
+  - confirmUpload:
+  - getUserFiles:
+  - getDownloadUrl:
+  - deleteFile:
+superAdmin:
+  - saListCustomers:
+  - saSaveCustomer:
+  - saCreateUser:
+  - saListAllUsers:
+  - saBlockUser:
+  - saDeleteCustomer:
+  - saGetDashboard:
+  - saListAllRoles:
+  - saMoveUserToCustomer:
+  - saListAllPermissions:
+  - saCreateOrUpdateRole:
+  - saDeleteRole:
+  - saGetRoleDetails:
+  - saUpdateUser:
+  - saDeleteUser:
+  - saGetUserDetails:
+  - saGetCustomer:
+userManagement:
+  - getMyUserContext:
 greeting:
   - hello:

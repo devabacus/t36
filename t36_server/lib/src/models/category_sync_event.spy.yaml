@@ -1,0 +1,5 @@
+class: CategorySyncEvent
+fields:
+  type: SyncEventType
+  category: Category?,  
+  id: UuidValue?,

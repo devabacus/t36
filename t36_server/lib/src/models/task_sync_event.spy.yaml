@@ -1,0 +1,5 @@
+class: TaskSyncEvent
+fields:
+  type: SyncEventType
+  task: Task?,  
+  id: UuidValue?,

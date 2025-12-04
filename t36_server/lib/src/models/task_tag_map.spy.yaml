@@ -1,0 +1,20 @@
+class: TaskTagMap
+table: task_tag_map
+fields:
+  id: UuidValue?, defaultPersist=random_v7
+  taskId: UuidValue, relation(parent=task, onDelete=Cascade)
+  tagId: UuidValue, relation(parent=tag, onDelete=Cascade)
+  userId: int
+  customerId: UuidValue, relation(parent=customer, onDelete=Cascade)
+  createdAt: DateTime
+  lastModified: DateTime
+  isDeleted: bool, default=false  
+indexes:
+  task_tag_map_unique_idx:
+    fields: taskId, tagId, userId
+    unique: true
+
+# нужно добавить в task.spy.yaml и tag.spy.yaml
+# taskTagMaps: List<TaskTagMap>?, relation
+
+
