@@ -1,0 +1,5 @@
+# manifest: startProject
+class: RoleDetails
+fields:
+  role: Role
+  permissionIds: List<UuidValue>

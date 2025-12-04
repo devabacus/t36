@@ -1,0 +1,8 @@
+# manifest: startProject
+class: SuperAdminDashboard
+fields:
+  totalUsers: int
+  totalCustomers: int
+  blockedUsers: int
+  activeUsers: int
+  recentUsers: List<module:auth:UserInfo>

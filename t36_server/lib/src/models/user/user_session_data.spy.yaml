@@ -1,0 +1,7 @@
+# manifest: startProject
+class: UserSessionData
+fields:
+  userId: int
+  customerId: UuidValue
+  roleId: UuidValue
+  activePermissions: List<String>

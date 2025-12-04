@@ -1,0 +1,8 @@
+# manifest: startProject
+enum: UploadStatus
+values:
+  - pending      # Ожидает загрузки
+  - uploading    # В процессе загрузки
+  - uploaded     # Успешно загружен
+  - failed       # Ошибка загрузки
+  - deleted      # Помечен как удаленный

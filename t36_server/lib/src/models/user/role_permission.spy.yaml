@@ -1,0 +1,7 @@
+# manifest: startProject
+class: RolePermission
+table: role_permission
+fields:
+  id: UuidValue?, defaultPersist=random_v7
+  roleId: UuidValue, relation(parent=role, onDelete=Cascade)
+  permissionId: UuidValue, relation(parent=permission, onDelete=Cascade)

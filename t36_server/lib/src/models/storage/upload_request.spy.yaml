@@ -1,0 +1,7 @@
+# manifest: startProject
+class: UploadRequest
+fields:
+  uploadUrl: String
+  fileId: UuidValue?, defaultPersist=random_v7
+  objectKey: String
+  expiresAt: DateTime

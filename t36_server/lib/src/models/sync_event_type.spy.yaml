@@ -1,0 +1,5 @@
+# manifest: startProject
+enum: SyncEventType
+values:
+  - create
+  - update

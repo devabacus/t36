@@ -1,0 +1,9 @@
+# manifest: startProject
+class: Permission
+table: permission
+fields:
+  id: UuidValue?, defaultPersist=random_v7
+  key: String,
+  description: String?,
+  createdAt: DateTime?
+  updatedAt: DateTime?

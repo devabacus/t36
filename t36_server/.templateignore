@@ -1,0 +1,7 @@
+// manifest: startProject
+build/
+.dart_tool/
+.packages
+generated/
+migrations/
+docker/

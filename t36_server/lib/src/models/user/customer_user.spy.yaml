@@ -1,0 +1,8 @@
+# manifest: startProject
+class: CustomerUser
+table: customer_user
+fields:
+  id: UuidValue?, defaultPersist=random_v7
+  customerId: UuidValue, relation(parent=customer, onDelete=Cascade)
+  userId: int,
+  roleId: UuidValue, relation(parent=role, onDelete=Cascade)

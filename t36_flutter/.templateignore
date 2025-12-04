@@ -1,0 +1,11 @@
+// manifest: startProject
+build/
+.dart_tool/
+android/
+ios/
+linux/
+macos/
+windows/
+web/
+.flutter-plugins
+.flutter-plugins-dependencies

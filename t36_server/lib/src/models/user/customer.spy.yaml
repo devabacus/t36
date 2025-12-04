@@ -1,0 +1,14 @@
+# manifest: startProject
+class: Customer
+table: customer
+fields:
+  id: UuidValue?, defaultPersist=random_v7
+  userId: int
+  createdAt: DateTime
+  lastModified: DateTime
+  isDeleted: bool, default=false
+  name: String,
+  email: String?,  
+  info: String?,
+  subscriptionStatus: String?
+  

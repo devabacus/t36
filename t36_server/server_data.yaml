@@ -1,0 +1,30 @@
+# manifest: startProject
+project:
+  name: "t36"
+  
+server:
+  ip: "89.223.71.39"
+  http_port: "80:80"
+  https_port: "443:443"
+  domain: "my-points.ru"
+  subdomain:
+    api: "api23"
+    web: "web23"
+    insights: "insights23"
+  email: "frolprank@gmail.com"
+  
+database:
+  host: "192.168.0.6"
+  port: "5432"
+  name: "t36_db"
+  user: "t36_user"  
+  
+reddis:
+  host: "192.168.0.7"
+  port: "6379"
+  user: "default"
+  
+deployment:
+  organization: "devabacus"
+  ssh_user: "serverpod"
+

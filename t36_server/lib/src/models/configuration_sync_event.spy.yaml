@@ -1,0 +1,6 @@
+# manifest: startProject
+class: ConfigurationSyncEvent
+fields:
+  type: SyncEventType
+  configuration: Configuration?,     
+  id: UuidValue?,

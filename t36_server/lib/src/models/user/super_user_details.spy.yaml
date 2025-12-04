@@ -1,0 +1,7 @@
+# manifest: startProject
+class: SuperUserDetails
+fields:
+  userInfo: module:auth:UserInfo
+  customer: Customer?
+  role: Role?
+  customerUser: CustomerUser?

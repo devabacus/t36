@@ -1,0 +1,15 @@
+# manifest: startProject
+class: Configuration
+table: configuration
+fields:
+  id: UuidValue?, defaultPersist=random_v7
+  userId: int
+  customerId: UuidValue, relation(parent=customer, onDelete=Cascade)
+  createdAt: DateTime
+  lastModified: DateTime
+  isDeleted: bool, default=false
+  group: String
+  key: String
+  value: String
+
+

@@ -1,0 +1,17 @@
+# manifest: startProject
+class: UploadedFile
+table: uploaded_files
+fields:
+  id: UuidValue?, defaultPersist=random_v7  
+  bucketName: String
+  objectKey: String        # Путь в S3
+  originalFilename: String # Оригинальное имя файла
+  mimeType: String
+  size: int               # Размер в байтах
+  status: UploadStatus
+  uploadedAt: DateTime
+  userId: int
+  customerId: UuidValue, relation(parent=customer, onDelete=Cascade)
+  metadata: String?       # JSON с дополнительными данными
+  publicUrl: String?      # Публичная ссылка если есть
+  expiresAt: DateTime?    # Время истечения ссылки
