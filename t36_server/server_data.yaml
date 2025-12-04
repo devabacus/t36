@@ -14,13 +14,13 @@ server:
   email: "frolprank@gmail.com"
   
 database:
-  host: "192.168.0.6"
+  host: "192.168.0.7"
   port: "5432"
   name: "t36_db"
   user: "t36_user"  
   
 reddis:
-  host: "192.168.0.7"
+  host: "192.168.0.8"
   port: "6379"
   user: "default"
   
