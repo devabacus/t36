@@ -11,6 +11,13 @@ admin:
   - blockUser:
   - getRoleDetails:
   - updateUser:
+category:
+  - createCategory:
+  - getCategories:
+  - getCategoryById:
+  - getCategoriesSince:
+  - updateCategory:
+  - watchEvents:
 configuration:
   - createConfiguration:
   - getConfigurations:
@@ -42,6 +49,28 @@ superAdmin:
   - saDeleteUser:
   - saGetUserDetails:
   - saGetCustomer:
+tag:
+  - createTag:
+  - getTags:
+  - getTagById:
+  - getTagsSince:
+  - updateTag:
+  - watchEvents:
+task:
+  - createTask:
+  - getTasks:
+  - getTaskById:
+  - getTasksSince:
+  - updateTask:
+  - watchEvents:
+  - getTasksByCategoryId:
+taskTagMap:
+  - createTaskTagMap:
+  - getTagsForTask:
+  - getTasksForTag:
+  - getTaskTagMapsSince:
+  - watchEvents:
+  - deleteTaskTagMapByTaskAndTag:
 userManagement:
   - getMyUserContext:
 greeting:

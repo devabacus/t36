@@ -4,13 +4,17 @@ import 'package:ble_feature/ble_feature.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
-import 'package:t36/features/configuration/presentation/routing/configuration_routes_constants.dart';
-import 'package:t36/features/home/presentation/widgets/settings_display_section.dart';
+
 
 import '../../../../core/providers/serverpod_client_provider.dart';
 import '../../../auth/domain/providers/auth_usecase_providers.dart';
 import '../../../auth/presentation/providers/auth_state_providers.dart';
 import '../../../bluetooth/presentation/routing/bluetooth_routes_constants.dart';
+import '../../../configuration/presentation/routing/configuration_routes_constants.dart';
+import '../widgets/creation_section.dart';
+import '../widgets/data_display_section.dart';
+import '../widgets/relation_management_section.dart';
+import '../widgets/settings_display_section.dart';
 import '../widgets/simple_file_upload.dart';
 
 class HomePage extends ConsumerStatefulWidget {
@@ -21,6 +25,10 @@ class HomePage extends ConsumerStatefulWidget {
 }
 
 class _HomePageState extends ConsumerState<HomePage> {
+  String? _selectedCategoryId;
+  String? _selectedTaskId;
+  String? _selectedTagId;
+
   @override
   Widget build(BuildContext context) {
     final currentUser = ref.watch(authStateChangesProvider).value;
@@ -95,6 +103,24 @@ class _HomePageState extends ConsumerState<HomePage> {
               const CharacteristicControlWidget()
             else 
               const SizedBox.shrink(),
+
+            CreationSection(
+              selectedCategoryId: _selectedCategoryId,
+              onCategoryChanged: (value) =>
+                  setState(() => _selectedCategoryId = value),
+            ),
+            const SizedBox(height: 20),
+            RelationManagementSection(
+              selectedTaskId: _selectedTaskId,
+              selectedTagId: _selectedTagId,
+              onTaskChanged: (value) => setState(() => _selectedTaskId = value),
+              onTagChanged: (value) => setState(() => _selectedTagId = value),
+            ),
+            const SizedBox(height: 20),
+            DataDisplaySection(
+              selectedTaskId: _selectedTaskId,
+              selectedTagId: _selectedTagId,
+            ),
           ],
         ),
       ),
