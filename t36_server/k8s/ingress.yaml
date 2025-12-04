@@ -1,0 +1,48 @@
+
+
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: t36-server-ingress
+  annotations:    
+    cert-manager.io/cluster-issuer: "letsencrypt-prod" 
+spec:
+  ingressClassName: traefik
+  tls:
+  - hosts:
+    - api36.my-points.ru
+    - web36.my-points.ru
+    - insights36.my-points.ru
+    secretName: serverpod-tls-t36
+  rules:
+  - host: "api36.my-points.ru"
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: t36-server-service
+            port:
+              name: api
+  - host: "web36.my-points.ru"
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: t36-server-service
+            port:
+              name: web
+  - host: "insights36.my-points.ru"
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: t36-server-service
+            port:
+              name: insights
+    

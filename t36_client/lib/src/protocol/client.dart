@@ -33,9 +33,10 @@ import 'package:t36_client/src/protocol/task.dart' as _i19;
 import 'package:t36_client/src/protocol/task_sync_event.dart' as _i20;
 import 'package:t36_client/src/protocol/task_tag_map.dart' as _i21;
 import 'package:t36_client/src/protocol/task_tag_map_sync_event.dart' as _i22;
-import 'package:t36_client/src/protocol/user/user_session_data.dart' as _i23;
-import 'package:t36_client/src/protocol/greeting.dart' as _i24;
-import 'protocol.dart' as _i25;
+import 'package:t36_client/src/protocol/test_data.dart' as _i23;
+import 'package:t36_client/src/protocol/user/user_session_data.dart' as _i24;
+import 'package:t36_client/src/protocol/greeting.dart' as _i25;
+import 'protocol.dart' as _i26;
 
 /// {@category Endpoint}
 class EndpointAdmin extends _i1.EndpointRef {
@@ -678,14 +679,54 @@ class EndpointTaskTagMap extends _i1.EndpointRef {
 }
 
 /// {@category Endpoint}
+class EndpointTestData extends _i1.EndpointRef {
+  EndpointTestData(_i1.EndpointCaller caller) : super(caller);
+
+  @override
+  String get name => 'testData';
+
+  /// Создает новую запись TestData в базе данных.
+  _i2.Future<_i23.TestData> createTestData(_i23.TestData testData) =>
+      caller.callServerEndpoint<_i23.TestData>(
+        'testData',
+        'createTestData',
+        {'testData': testData},
+      );
+
+  /// Возвращает список всех записей.
+  _i2.Future<List<_i23.TestData>> listTestDatas() =>
+      caller.callServerEndpoint<List<_i23.TestData>>(
+        'testData',
+        'listTestDatas',
+        {},
+      );
+
+  /// Обновляет существующую запись.
+  _i2.Future<_i23.TestData> updateTestData(_i23.TestData testData) =>
+      caller.callServerEndpoint<_i23.TestData>(
+        'testData',
+        'updateTestData',
+        {'testData': testData},
+      );
+
+  /// Удаляет запись.
+  _i2.Future<bool> deleteTestData(_i23.TestData testData) =>
+      caller.callServerEndpoint<bool>(
+        'testData',
+        'deleteTestData',
+        {'testData': testData},
+      );
+}
+
+/// {@category Endpoint}
 class EndpointUserManagement extends _i1.EndpointRef {
   EndpointUserManagement(_i1.EndpointCaller caller) : super(caller);
 
   @override
   String get name => 'userManagement';
 
-  _i2.Future<_i23.UserSessionData?> getMyUserContext() =>
-      caller.callServerEndpoint<_i23.UserSessionData?>(
+  _i2.Future<_i24.UserSessionData?> getMyUserContext() =>
+      caller.callServerEndpoint<_i24.UserSessionData?>(
         'userManagement',
         'getMyUserContext',
         {},
@@ -702,8 +743,8 @@ class EndpointGreeting extends _i1.EndpointRef {
   String get name => 'greeting';
 
   /// Returns a personalized greeting message: "Hello {name}".
-  _i2.Future<_i24.Greeting> hello(String name) =>
-      caller.callServerEndpoint<_i24.Greeting>(
+  _i2.Future<_i25.Greeting> hello(String name) =>
+      caller.callServerEndpoint<_i25.Greeting>(
         'greeting',
         'hello',
         {'name': name},
@@ -746,7 +787,7 @@ class Client extends _i1.ServerpodClientShared {
     bool? disconnectStreamsOnLostInternetConnection,
   }) : super(
          host,
-         _i25.Protocol(),
+         _i26.Protocol(),
          securityContext: securityContext,
          authenticationKeyManager: authenticationKeyManager,
          streamingConnectionTimeout: streamingConnectionTimeout,
@@ -764,6 +805,7 @@ class Client extends _i1.ServerpodClientShared {
     tag = EndpointTag(this);
     task = EndpointTask(this);
     taskTagMap = EndpointTaskTagMap(this);
+    testData = EndpointTestData(this);
     userManagement = EndpointUserManagement(this);
     greeting = EndpointGreeting(this);
     modules = Modules(this);
@@ -785,6 +827,8 @@ class Client extends _i1.ServerpodClientShared {
 
   late final EndpointTaskTagMap taskTagMap;
 
+  late final EndpointTestData testData;
+
   late final EndpointUserManagement userManagement;
 
   late final EndpointGreeting greeting;
@@ -801,6 +845,7 @@ class Client extends _i1.ServerpodClientShared {
     'tag': tag,
     'task': task,
     'taskTagMap': taskTagMap,
+    'testData': testData,
     'userManagement': userManagement,
     'greeting': greeting,
   };

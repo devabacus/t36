@@ -26,28 +26,30 @@ import 'task.dart' as _i13;
 import 'task_sync_event.dart' as _i14;
 import 'task_tag_map.dart' as _i15;
 import 'task_tag_map_sync_event.dart' as _i16;
-import 'user/customer.dart' as _i17;
-import 'user/customer_user.dart' as _i18;
-import 'user/permission.dart' as _i19;
-import 'user/role.dart' as _i20;
-import 'user/role_details.dart' as _i21;
-import 'user/role_permission.dart' as _i22;
-import 'user/super_admin_dashboard.dart' as _i23;
-import 'user/super_user_details.dart' as _i24;
-import 'user/user_details.dart' as _i25;
-import 'user/user_session_data.dart' as _i26;
-import 'package:serverpod_auth_client/serverpod_auth_client.dart' as _i27;
-import 'package:t36_client/src/protocol/user/user_details.dart' as _i28;
-import 'package:t36_client/src/protocol/user/role.dart' as _i29;
-import 'package:t36_client/src/protocol/user/permission.dart' as _i30;
-import 'package:t36_client/src/protocol/category.dart' as _i31;
-import 'package:t36_client/src/protocol/configuration.dart' as _i32;
-import 'package:t36_client/src/protocol/storage/uploaded_file.dart' as _i33;
-import 'package:t36_client/src/protocol/user/customer.dart' as _i34;
-import 'package:t36_client/src/protocol/user/super_user_details.dart' as _i35;
-import 'package:t36_client/src/protocol/tag.dart' as _i36;
-import 'package:t36_client/src/protocol/task.dart' as _i37;
-import 'package:t36_client/src/protocol/task_tag_map.dart' as _i38;
+import 'test_data.dart' as _i17;
+import 'user/customer.dart' as _i18;
+import 'user/customer_user.dart' as _i19;
+import 'user/permission.dart' as _i20;
+import 'user/role.dart' as _i21;
+import 'user/role_details.dart' as _i22;
+import 'user/role_permission.dart' as _i23;
+import 'user/super_admin_dashboard.dart' as _i24;
+import 'user/super_user_details.dart' as _i25;
+import 'user/user_details.dart' as _i26;
+import 'user/user_session_data.dart' as _i27;
+import 'package:serverpod_auth_client/serverpod_auth_client.dart' as _i28;
+import 'package:t36_client/src/protocol/user/user_details.dart' as _i29;
+import 'package:t36_client/src/protocol/user/role.dart' as _i30;
+import 'package:t36_client/src/protocol/user/permission.dart' as _i31;
+import 'package:t36_client/src/protocol/category.dart' as _i32;
+import 'package:t36_client/src/protocol/configuration.dart' as _i33;
+import 'package:t36_client/src/protocol/storage/uploaded_file.dart' as _i34;
+import 'package:t36_client/src/protocol/user/customer.dart' as _i35;
+import 'package:t36_client/src/protocol/user/super_user_details.dart' as _i36;
+import 'package:t36_client/src/protocol/tag.dart' as _i37;
+import 'package:t36_client/src/protocol/task.dart' as _i38;
+import 'package:t36_client/src/protocol/task_tag_map.dart' as _i39;
+import 'package:t36_client/src/protocol/test_data.dart' as _i40;
 export 'category.dart';
 export 'category_sync_event.dart';
 export 'configuration.dart';
@@ -63,6 +65,7 @@ export 'task.dart';
 export 'task_sync_event.dart';
 export 'task_tag_map.dart';
 export 'task_tag_map_sync_event.dart';
+export 'test_data.dart';
 export 'user/customer.dart';
 export 'user/customer_user.dart';
 export 'user/permission.dart';
@@ -154,35 +157,38 @@ class Protocol extends _i1.SerializationManager {
     if (t == _i16.TaskTagMapSyncEvent) {
       return _i16.TaskTagMapSyncEvent.fromJson(data) as T;
     }
-    if (t == _i17.Customer) {
-      return _i17.Customer.fromJson(data) as T;
+    if (t == _i17.TestData) {
+      return _i17.TestData.fromJson(data) as T;
     }
-    if (t == _i18.CustomerUser) {
-      return _i18.CustomerUser.fromJson(data) as T;
+    if (t == _i18.Customer) {
+      return _i18.Customer.fromJson(data) as T;
     }
-    if (t == _i19.Permission) {
-      return _i19.Permission.fromJson(data) as T;
+    if (t == _i19.CustomerUser) {
+      return _i19.CustomerUser.fromJson(data) as T;
     }
-    if (t == _i20.Role) {
-      return _i20.Role.fromJson(data) as T;
+    if (t == _i20.Permission) {
+      return _i20.Permission.fromJson(data) as T;
     }
-    if (t == _i21.RoleDetails) {
-      return _i21.RoleDetails.fromJson(data) as T;
+    if (t == _i21.Role) {
+      return _i21.Role.fromJson(data) as T;
     }
-    if (t == _i22.RolePermission) {
-      return _i22.RolePermission.fromJson(data) as T;
+    if (t == _i22.RoleDetails) {
+      return _i22.RoleDetails.fromJson(data) as T;
     }
-    if (t == _i23.SuperAdminDashboard) {
-      return _i23.SuperAdminDashboard.fromJson(data) as T;
+    if (t == _i23.RolePermission) {
+      return _i23.RolePermission.fromJson(data) as T;
     }
-    if (t == _i24.SuperUserDetails) {
-      return _i24.SuperUserDetails.fromJson(data) as T;
+    if (t == _i24.SuperAdminDashboard) {
+      return _i24.SuperAdminDashboard.fromJson(data) as T;
     }
-    if (t == _i25.UserDetails) {
-      return _i25.UserDetails.fromJson(data) as T;
+    if (t == _i25.SuperUserDetails) {
+      return _i25.SuperUserDetails.fromJson(data) as T;
     }
-    if (t == _i26.UserSessionData) {
-      return _i26.UserSessionData.fromJson(data) as T;
+    if (t == _i26.UserDetails) {
+      return _i26.UserDetails.fromJson(data) as T;
+    }
+    if (t == _i27.UserSessionData) {
+      return _i27.UserSessionData.fromJson(data) as T;
     }
     if (t == _i1.getType<_i2.Category?>()) {
       return (data != null ? _i2.Category.fromJson(data) : null) as T;
@@ -231,36 +237,39 @@ class Protocol extends _i1.SerializationManager {
       return (data != null ? _i16.TaskTagMapSyncEvent.fromJson(data) : null)
           as T;
     }
-    if (t == _i1.getType<_i17.Customer?>()) {
-      return (data != null ? _i17.Customer.fromJson(data) : null) as T;
+    if (t == _i1.getType<_i17.TestData?>()) {
+      return (data != null ? _i17.TestData.fromJson(data) : null) as T;
     }
-    if (t == _i1.getType<_i18.CustomerUser?>()) {
-      return (data != null ? _i18.CustomerUser.fromJson(data) : null) as T;
+    if (t == _i1.getType<_i18.Customer?>()) {
+      return (data != null ? _i18.Customer.fromJson(data) : null) as T;
     }
-    if (t == _i1.getType<_i19.Permission?>()) {
-      return (data != null ? _i19.Permission.fromJson(data) : null) as T;
+    if (t == _i1.getType<_i19.CustomerUser?>()) {
+      return (data != null ? _i19.CustomerUser.fromJson(data) : null) as T;
     }
-    if (t == _i1.getType<_i20.Role?>()) {
-      return (data != null ? _i20.Role.fromJson(data) : null) as T;
+    if (t == _i1.getType<_i20.Permission?>()) {
+      return (data != null ? _i20.Permission.fromJson(data) : null) as T;
     }
-    if (t == _i1.getType<_i21.RoleDetails?>()) {
-      return (data != null ? _i21.RoleDetails.fromJson(data) : null) as T;
+    if (t == _i1.getType<_i21.Role?>()) {
+      return (data != null ? _i21.Role.fromJson(data) : null) as T;
     }
-    if (t == _i1.getType<_i22.RolePermission?>()) {
-      return (data != null ? _i22.RolePermission.fromJson(data) : null) as T;
+    if (t == _i1.getType<_i22.RoleDetails?>()) {
+      return (data != null ? _i22.RoleDetails.fromJson(data) : null) as T;
     }
-    if (t == _i1.getType<_i23.SuperAdminDashboard?>()) {
-      return (data != null ? _i23.SuperAdminDashboard.fromJson(data) : null)
+    if (t == _i1.getType<_i23.RolePermission?>()) {
+      return (data != null ? _i23.RolePermission.fromJson(data) : null) as T;
+    }
+    if (t == _i1.getType<_i24.SuperAdminDashboard?>()) {
+      return (data != null ? _i24.SuperAdminDashboard.fromJson(data) : null)
           as T;
     }
-    if (t == _i1.getType<_i24.SuperUserDetails?>()) {
-      return (data != null ? _i24.SuperUserDetails.fromJson(data) : null) as T;
+    if (t == _i1.getType<_i25.SuperUserDetails?>()) {
+      return (data != null ? _i25.SuperUserDetails.fromJson(data) : null) as T;
     }
-    if (t == _i1.getType<_i25.UserDetails?>()) {
-      return (data != null ? _i25.UserDetails.fromJson(data) : null) as T;
+    if (t == _i1.getType<_i26.UserDetails?>()) {
+      return (data != null ? _i26.UserDetails.fromJson(data) : null) as T;
     }
-    if (t == _i1.getType<_i26.UserSessionData?>()) {
-      return (data != null ? _i26.UserSessionData.fromJson(data) : null) as T;
+    if (t == _i1.getType<_i27.UserSessionData?>()) {
+      return (data != null ? _i27.UserSessionData.fromJson(data) : null) as T;
     }
     if (t == List<_i15.TaskTagMap>) {
       return (data as List).map((e) => deserialize<_i15.TaskTagMap>(e)).toList()
@@ -278,68 +287,72 @@ class Protocol extends _i1.SerializationManager {
       return (data as List).map((e) => deserialize<_i1.UuidValue>(e)).toList()
           as T;
     }
-    if (t == List<_i27.UserInfo>) {
-      return (data as List).map((e) => deserialize<_i27.UserInfo>(e)).toList()
+    if (t == List<_i28.UserInfo>) {
+      return (data as List).map((e) => deserialize<_i28.UserInfo>(e)).toList()
           as T;
     }
     if (t == List<String>) {
       return (data as List).map((e) => deserialize<String>(e)).toList() as T;
     }
-    if (t == List<_i28.UserDetails>) {
+    if (t == List<_i29.UserDetails>) {
       return (data as List)
-              .map((e) => deserialize<_i28.UserDetails>(e))
+              .map((e) => deserialize<_i29.UserDetails>(e))
               .toList()
           as T;
     }
-    if (t == List<_i29.Role>) {
-      return (data as List).map((e) => deserialize<_i29.Role>(e)).toList() as T;
+    if (t == List<_i30.Role>) {
+      return (data as List).map((e) => deserialize<_i30.Role>(e)).toList() as T;
     }
-    if (t == List<_i30.Permission>) {
-      return (data as List).map((e) => deserialize<_i30.Permission>(e)).toList()
+    if (t == List<_i31.Permission>) {
+      return (data as List).map((e) => deserialize<_i31.Permission>(e)).toList()
           as T;
     }
     if (t == List<_i1.UuidValue>) {
       return (data as List).map((e) => deserialize<_i1.UuidValue>(e)).toList()
           as T;
     }
-    if (t == List<_i31.Category>) {
-      return (data as List).map((e) => deserialize<_i31.Category>(e)).toList()
+    if (t == List<_i32.Category>) {
+      return (data as List).map((e) => deserialize<_i32.Category>(e)).toList()
           as T;
     }
-    if (t == List<_i32.Configuration>) {
+    if (t == List<_i33.Configuration>) {
       return (data as List)
-              .map((e) => deserialize<_i32.Configuration>(e))
+              .map((e) => deserialize<_i33.Configuration>(e))
               .toList()
           as T;
     }
-    if (t == List<_i33.UploadedFile>) {
+    if (t == List<_i34.UploadedFile>) {
       return (data as List)
-              .map((e) => deserialize<_i33.UploadedFile>(e))
+              .map((e) => deserialize<_i34.UploadedFile>(e))
               .toList()
           as T;
     }
-    if (t == List<_i34.Customer>) {
-      return (data as List).map((e) => deserialize<_i34.Customer>(e)).toList()
+    if (t == List<_i35.Customer>) {
+      return (data as List).map((e) => deserialize<_i35.Customer>(e)).toList()
           as T;
     }
-    if (t == List<_i35.SuperUserDetails>) {
+    if (t == List<_i36.SuperUserDetails>) {
       return (data as List)
-              .map((e) => deserialize<_i35.SuperUserDetails>(e))
+              .map((e) => deserialize<_i36.SuperUserDetails>(e))
               .toList()
           as T;
     }
-    if (t == List<_i36.Tag>) {
-      return (data as List).map((e) => deserialize<_i36.Tag>(e)).toList() as T;
+    if (t == List<_i37.Tag>) {
+      return (data as List).map((e) => deserialize<_i37.Tag>(e)).toList() as T;
     }
-    if (t == List<_i37.Task>) {
-      return (data as List).map((e) => deserialize<_i37.Task>(e)).toList() as T;
+    if (t == List<_i38.Task>) {
+      return (data as List).map((e) => deserialize<_i38.Task>(e)).toList() as T;
     }
-    if (t == List<_i38.TaskTagMap>) {
-      return (data as List).map((e) => deserialize<_i38.TaskTagMap>(e)).toList()
+    if (t == List<_i39.TaskTagMap>) {
+      return (data as List).map((e) => deserialize<_i39.TaskTagMap>(e)).toList()
+          as T;
+    }
+    if (t == List<_i40.TestData>) {
+      return (data as List).map((e) => deserialize<_i40.TestData>(e)).toList()
           as T;
     }
     try {
-      return _i27.Protocol().deserialize<T>(data, t);
+      return _i28.Protocol().deserialize<T>(data, t);
     } on _i1.DeserializationTypeNotFoundException catch (_) {}
     return super.deserialize<T>(data, t);
   }
@@ -384,28 +397,30 @@ class Protocol extends _i1.SerializationManager {
         return 'TaskTagMap';
       case _i16.TaskTagMapSyncEvent():
         return 'TaskTagMapSyncEvent';
-      case _i17.Customer():
+      case _i17.TestData():
+        return 'TestData';
+      case _i18.Customer():
         return 'Customer';
-      case _i18.CustomerUser():
+      case _i19.CustomerUser():
         return 'CustomerUser';
-      case _i19.Permission():
+      case _i20.Permission():
         return 'Permission';
-      case _i20.Role():
+      case _i21.Role():
         return 'Role';
-      case _i21.RoleDetails():
+      case _i22.RoleDetails():
         return 'RoleDetails';
-      case _i22.RolePermission():
+      case _i23.RolePermission():
         return 'RolePermission';
-      case _i23.SuperAdminDashboard():
+      case _i24.SuperAdminDashboard():
         return 'SuperAdminDashboard';
-      case _i24.SuperUserDetails():
+      case _i25.SuperUserDetails():
         return 'SuperUserDetails';
-      case _i25.UserDetails():
+      case _i26.UserDetails():
         return 'UserDetails';
-      case _i26.UserSessionData():
+      case _i27.UserSessionData():
         return 'UserSessionData';
     }
-    className = _i27.Protocol().getClassNameForObject(data);
+    className = _i28.Protocol().getClassNameForObject(data);
     if (className != null) {
       return 'serverpod_auth.$className';
     }
@@ -463,39 +478,42 @@ class Protocol extends _i1.SerializationManager {
     if (dataClassName == 'TaskTagMapSyncEvent') {
       return deserialize<_i16.TaskTagMapSyncEvent>(data['data']);
     }
+    if (dataClassName == 'TestData') {
+      return deserialize<_i17.TestData>(data['data']);
+    }
     if (dataClassName == 'Customer') {
-      return deserialize<_i17.Customer>(data['data']);
+      return deserialize<_i18.Customer>(data['data']);
     }
     if (dataClassName == 'CustomerUser') {
-      return deserialize<_i18.CustomerUser>(data['data']);
+      return deserialize<_i19.CustomerUser>(data['data']);
     }
     if (dataClassName == 'Permission') {
-      return deserialize<_i19.Permission>(data['data']);
+      return deserialize<_i20.Permission>(data['data']);
     }
     if (dataClassName == 'Role') {
-      return deserialize<_i20.Role>(data['data']);
+      return deserialize<_i21.Role>(data['data']);
     }
     if (dataClassName == 'RoleDetails') {
-      return deserialize<_i21.RoleDetails>(data['data']);
+      return deserialize<_i22.RoleDetails>(data['data']);
     }
     if (dataClassName == 'RolePermission') {
-      return deserialize<_i22.RolePermission>(data['data']);
+      return deserialize<_i23.RolePermission>(data['data']);
     }
     if (dataClassName == 'SuperAdminDashboard') {
-      return deserialize<_i23.SuperAdminDashboard>(data['data']);
+      return deserialize<_i24.SuperAdminDashboard>(data['data']);
     }
     if (dataClassName == 'SuperUserDetails') {
-      return deserialize<_i24.SuperUserDetails>(data['data']);
+      return deserialize<_i25.SuperUserDetails>(data['data']);
     }
     if (dataClassName == 'UserDetails') {
-      return deserialize<_i25.UserDetails>(data['data']);
+      return deserialize<_i26.UserDetails>(data['data']);
     }
     if (dataClassName == 'UserSessionData') {
-      return deserialize<_i26.UserSessionData>(data['data']);
+      return deserialize<_i27.UserSessionData>(data['data']);
     }
     if (dataClassName.startsWith('serverpod_auth.')) {
       data['className'] = dataClassName.substring(15);
-      return _i27.Protocol().deserializeByClassName(data);
+      return _i28.Protocol().deserializeByClassName(data);
     }
     return super.deserializeByClassName(data);
   }

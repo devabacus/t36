@@ -71,6 +71,11 @@ taskTagMap:
   - getTaskTagMapsSince:
   - watchEvents:
   - deleteTaskTagMapByTaskAndTag:
+testData:
+  - createTestData:
+  - listTestDatas:
+  - updateTestData:
+  - deleteTestData:
 userManagement:
   - getMyUserContext:
 greeting:
